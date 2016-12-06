@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Tiamo with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/naver09.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="Tiamo"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ htmlunit-2.23.jar xalan-2.7.2.jar serializer-2.7.2.jar commons-lang3-3.4.jar httpclient-4.5.2.jar httpcore-4.4.4.jar httpmime-4.5.2.jar commons-codec-1.10.jar htmlunit-core-js-2.23.jar neko-htmlunit-2.23.jar xercesImpl-2.11.0.jar xml-apis-1.4.01.jar cssparser-0.9.20.jar sac-1.3.jar commons-io-2.5.jar commons-logging-1.2.jar websocket-client-9.2.18.v20160721.jar jetty-util-9.2.18.v20160721.jar jetty-io-9.2.18.v20160721.jar websocket-common-9.2.18.v20160721.jar websocket-api-9.2.18.v20160721.jar jsoup-1.10.1.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="${dir.jarfile}/target/classes"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.23" includes="htmlunit-2.23.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/xalan/xalan/2.7.2" includes="xalan-2.7.2.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/xalan/serializer/2.7.2" includes="serializer-2.7.2.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/apache/commons/commons-lang3/3.4" includes="commons-lang3-3.4.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/apache/httpcomponents/httpclient/4.5.2" includes="httpclient-4.5.2.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/apache/httpcomponents/httpcore/4.4.4" includes="httpcore-4.4.4.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2" includes="httpmime-4.5.2.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/commons-codec/commons-codec/1.10" includes="commons-codec-1.10.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.23" includes="htmlunit-core-js-2.23.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.23" includes="neko-htmlunit-2.23.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/xerces/xercesImpl/2.11.0" includes="xercesImpl-2.11.0.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/xml-apis/xml-apis/1.4.01" includes="xml-apis-1.4.01.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.20" includes="cssparser-0.9.20.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/w3c/css/sac/1.3" includes="sac-1.3.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/commons-io/commons-io/2.5" includes="commons-io-2.5.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/commons-logging/commons-logging/1.2" includes="commons-logging-1.2.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.2.18.v20160721" includes="websocket-client-9.2.18.v20160721.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/eclipse/jetty/jetty-util/9.2.18.v20160721" includes="jetty-util-9.2.18.v20160721.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/eclipse/jetty/jetty-io/9.2.18.v20160721" includes="jetty-io-9.2.18.v20160721.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.2.18.v20160721" includes="websocket-common-9.2.18.v20160721.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.2.18.v20160721" includes="websocket-api-9.2.18.v20160721.jar"/>
+            <zipfileset dir="/Volumes/Macintosh Data/Users/andy/.m2/repository/org/jsoup/jsoup/1.10.1" includes="jsoup-1.10.1.jar"/>
+        </jar>
+    </target>
+</project>
